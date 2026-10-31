@@ -1,0 +1,15 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	// 클라우드플레어에 올라갈 때 쓰이는 이름. 영문 소문자와 하이픈만 가능.
+	"name": "daehan-precision-site",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2026-10-01",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	}
+	// 참고: 회사 소개 원페이지는 서버 캐시(R2)나 이미지 최적화 바인딩이 필요 없어서
+	// OpenNext 기본 템플릿에 있던 r2_buckets / services / images 항목을 뺐습니다.
+	// 나중에 블로그·게시판처럼 자주 바뀌는 내용이 생기면 그때 추가합니다.
+}

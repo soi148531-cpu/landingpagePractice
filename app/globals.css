@@ -1,0 +1,70 @@
+@import "tailwindcss";
+/* Pretendard 글꼴: 화면에 실제로 쓰인 글자 범위만 나눠서 내려받는 방식(dynamic subset) */
+@import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+
+/* 사이트 전체 색상. 여기 값만 바꾸면 전체 색이 바뀝니다. */
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  /* 짙은 강철색 계열(신뢰감) + 포인트 오렌지(가공 불꽃·주의색 느낌) */
+  --color-steel-950: #0b1220;
+  --color-steel-900: #111a2b;
+  --color-steel-800: #1b2740;
+  --color-steel-700: #2a3a5a;
+  --color-steel-600: #3e4f73;
+  --color-steel-500: #5b6b8c;
+  --color-steel-400: #8593ad;
+  --color-steel-300: #b3bccd;
+  --color-steel-200: #d6dbe6;
+  --color-steel-100: #eef1f6;
+  --color-steel-50: #f7f8fb;
+
+  --color-accent-600: #d9531e;
+  --color-accent-500: #f06a2b;
+  --color-accent-400: #ff8a4c;
+  --color-accent-100: #ffe9dc;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* 메뉴를 눌러 이동할 때 고정 메뉴에 가려지지 않게 */
+}
+
+body {
+  background: var(--color-steel-50);
+  color: var(--color-steel-900);
+  font-feature-settings: "ss05"; /* Pretendard 숫자 모양 옵션 */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 금속 질감 느낌의 가는 줄무늬 (사진 대신 쓰는 배경) */
+.bg-brushed {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* 사진이 들어갈 자리 표시 (실제 고객 사진이 오면 이 자리를 <img>로 교체) */
+.photo-slot {
+  background:
+    linear-gradient(135deg, var(--color-steel-800), var(--color-steel-900) 60%, var(--color-steel-950)),
+    var(--color-steel-900);
+  position: relative;
+  overflow: hidden;
+}
+.photo-slot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
