@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "assets_fonts_licenses": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "bound_system_authority": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "component_state_coverage": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "contrast": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "implementation_contract_complete": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "opaque_extension_preservation": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "portable_core_structure": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "reduced_motion": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "responsive_320_200": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "token_reference_closure": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "unknown_absence": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    }
+  },
+  "design_md_sha256": "1c700381661d54d132292081720b2c62a74ed465eea6b135970273b61a462650",
+  "graph_sha256": "59edf801db6b53c238e9aeea091c3931fdf3906e85f6777820c180b551694c28",
+  "groups": {
+    "components-states": {
+      "evidence": [
+        "app/page.tsx"
+      ],
+      "status": "covered"
+    },
+    "content-locales": {
+      "evidence": [
+        "app/content.ts"
+      ],
+      "status": "covered"
+    },
+    "experience": {
+      "evidence": [
+        "app/content.ts",
+        ".omd/decisions.md"
+      ],
+      "status": "covered"
+    },
+    "foundations": {
+      "evidence": [
+        "app/globals.css",
+        ".omd/decisions.md"
+      ],
+      "status": "covered"
+    },
+    "governance": {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "status": "covered"
+    },
+    "layout-platforms": {
+      "evidence": [
+        "app/page.tsx"
+      ],
+      "status": "covered"
+    },
+    "typography-assets": {
+      "evidence": [
+        "package.json",
+        ".omd/decisions.md"
+      ],
+      "status": "covered"
+    }
+  },
+  "schema_version": "2.0.0"
+}

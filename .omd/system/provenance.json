@@ -1,0 +1,128 @@
+{
+  "decisions": [
+    {
+      "evidence": [
+        "app/content.ts"
+      ],
+      "path": "/identity/name",
+      "source_class": "repository-fact"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/experience/summary",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md",
+        ".claude/data/references/ibm/DESIGN.md"
+      ],
+      "path": "/experience/principles",
+      "source_class": "agent-proposed-greenfield-decision"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/foundations/tokens/color.action.primary",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/foundations/tokens/color.action.primary-hover",
+      "source_class": "agent-proposed-greenfield-decision"
+    },
+    {
+      "evidence": [
+        "app/globals.css"
+      ],
+      "path": "/foundations/tokens/color.surface.dark",
+      "source_class": "repository-fact"
+    },
+    {
+      "evidence": [
+        "app/globals.css"
+      ],
+      "path": "/foundations/tokens/color.text.strong",
+      "source_class": "repository-fact"
+    },
+    {
+      "evidence": [
+        "app/globals.css"
+      ],
+      "path": "/foundations/tokens/color.text.muted",
+      "source_class": "repository-fact"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/foundations/tokens/radius.none",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/foundations/tokens/radius.control",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        ".claude/data/references/ibm/DESIGN.md"
+      ],
+      "path": "/foundations/tokens/size.control-height",
+      "source_class": "verified-reference-inspiration"
+    },
+    {
+      "evidence": [
+        ".claude/data/references/ibm/DESIGN.md"
+      ],
+      "path": "/foundations/tokens/space.section",
+      "source_class": "verified-reference-inspiration"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/typography_assets/roles/0/family",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        "package.json"
+      ],
+      "path": "/typography_assets/assets/0",
+      "source_class": "repository-fact"
+    },
+    {
+      "evidence": [
+        "app/page.tsx"
+      ],
+      "path": "/layout_platforms/rules",
+      "source_class": "repository-fact"
+    },
+    {
+      "evidence": [
+        "app/content.ts",
+        ".omd/decisions.md"
+      ],
+      "path": "/content_locales/voice",
+      "source_class": "agent-proposed-greenfield-decision"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/typography_assets/rules",
+      "source_class": "prompt-fact"
+    }
+  ],
+  "design_md_sha256": "1c700381661d54d132292081720b2c62a74ed465eea6b135970273b61a462650",
+  "graph_sha256": "59edf801db6b53c238e9aeea091c3931fdf3906e85f6777820c180b551694c28",
+  "schema_version": "2.0.0"
+}

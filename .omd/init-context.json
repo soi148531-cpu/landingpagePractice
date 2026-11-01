@@ -1,0 +1,12 @@
+{
+  "reference_id": "ibm",
+  "description": "대한정밀 금속 정밀가공 공장 회사 소개 원페이지의 DESIGN.md. IBM과 BMW를 참고하되 확인된 값만 사용 (최종 기준 참고: IBM)",
+  "mode": "inspired",
+  "delta_set": {
+    "axes": { "radius.delta_px": -12 },
+    "voiceHints": ["짧고 사실 중심", "현장 용어를 그대로 쓴다"],
+    "matchedKeywords": ["b2b", "enterprise", "precise", "trustworthy"],
+    "warnings": ["IBM 기본색(파랑) 대신 프로젝트 주인이 오렌지 유지를 선택"]
+  },
+  "bootstrapped_at": "2026-11-01T00:00:00Z"
+}

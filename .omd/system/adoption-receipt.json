@@ -1,0 +1,41 @@
+{
+  "authority": "system-graph",
+  "inputs": {
+    "coverage_sha256": "428dfd8f7f9e6b6b6c0b382d86357e3625b673c96110538b7d8419dd73fb6359",
+    "graph_sha256": "0abd68a0b0f759c6c5c4d96331001820b322f200b8ac613a0651f101876c901a",
+    "provenance_sha256": "10720e9af450ea42b243883a5330f5cd8c5c3a16156fb435b92e2f5247395c8b"
+  },
+  "kind": "design-md-core-adoption-receipt",
+  "outputs": {
+    "coverage": {
+      "path": ".omd/system/coverage.json",
+      "sha256": "b45a9e4ca104446ad51e1c73827b21d6635ad61b4d7cbf25ba7e0e811ace195f"
+    },
+    "design_md": {
+      "path": "DESIGN.md",
+      "sha256": "1c700381661d54d132292081720b2c62a74ed465eea6b135970273b61a462650"
+    },
+    "graph": {
+      "path": ".omd/system/graph.json",
+      "sha256": "59edf801db6b53c238e9aeea091c3931fdf3906e85f6777820c180b551694c28"
+    },
+    "manifest": {
+      "path": ".omd/system/manifest.json",
+      "sha256": "a8477bff485407bfc0e0c06f06c6c57a9892b1d47b9dc95bdd7bcdcc44817692"
+    },
+    "provenance": {
+      "path": ".omd/system/provenance.json",
+      "sha256": "dc3478d4b413d4abb6801b96564f921f98a641dc03601cc77f367eaab83119d5"
+    }
+  },
+  "review": {
+    "authority_transition_approved": true,
+    "receipt_sha256": "a0715acd7838c360da581ed5f65ff37efcbb1c96c5d8c3a884820e922564baf1",
+    "reviewer": {
+      "identifier": "soi148531-cpu",
+      "role": "project-owner"
+    }
+  },
+  "schema_version": "2.0.0",
+  "status": "adopted"
+}

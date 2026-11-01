@@ -1,0 +1,469 @@
+{
+  "$schema": "https://oh-my-design.kr/schema/design-system-graph-v2.schema.json",
+  "components_states": {
+    "components": [
+      {
+        "anatomy": [
+          "아이콘(선택)",
+          "글자"
+        ],
+        "id": "primary-action",
+        "interaction": {
+          "kind": "interactive",
+          "state_applicability": {
+            "default": {
+              "applicability": "applicable"
+            },
+            "disabled": {
+              "applicability": "not-applicable",
+              "reason": "모든 버튼이 항상 사용 가능한 링크다"
+            },
+            "error": {
+              "applicability": "not-applicable",
+              "reason": "입력 폼이 없다"
+            },
+            "focus-visible": {
+              "applicability": "applicable"
+            },
+            "hover": {
+              "applicability": "applicable"
+            },
+            "loading": {
+              "applicability": "not-applicable",
+              "reason": "페이지 안에서 처리하는 작업 없이 전화·메일 앱이나 지도로 이동만 한다"
+            },
+            "success": {
+              "applicability": "not-applicable",
+              "reason": "입력 폼이 없다"
+            }
+          }
+        },
+        "semantics": "견적 요청·전화·이메일처럼 페이지를 벗어나는 링크 버튼",
+        "states": [
+          "default",
+          "hover",
+          "focus-visible"
+        ],
+        "token_refs": [
+          "color.action.primary",
+          "color.action.primary-hover",
+          "color.text.on-dark",
+          "radius.control",
+          "size.control-height"
+        ],
+        "variants": [
+          "채움",
+          "외곽선"
+        ]
+      },
+      {
+        "anatomy": [
+          "머리글 행",
+          "설비명",
+          "제조사",
+          "보유 수량",
+          "가공 범위"
+        ],
+        "id": "equipment-table",
+        "interaction": {
+          "kind": "non-interactive",
+          "reason": "읽기 전용 표다. 행에 마우스를 올리면 배경만 옅게 바뀐다"
+        },
+        "semantics": "보유 설비 목록 표. 좁은 화면에서는 표 전체가 옆으로 밀려서 보인다",
+        "states": [
+          "default",
+          "hover"
+        ],
+        "token_refs": [
+          "color.surface.dark",
+          "color.text.on-dark-muted",
+          "color.border.subtle",
+          "radius.none"
+        ]
+      },
+      {
+        "anatomy": [
+          "로고",
+          "메뉴",
+          "전화 버튼",
+          "모바일 메뉴 버튼"
+        ],
+        "id": "site-header",
+        "interaction": {
+          "kind": "interactive",
+          "state_applicability": {
+            "default": {
+              "applicability": "applicable"
+            },
+            "disabled": {
+              "applicability": "not-applicable",
+              "reason": "비활성 메뉴 항목이 없다"
+            },
+            "error": {
+              "applicability": "not-applicable",
+              "reason": "입력이 없다"
+            },
+            "focus-visible": {
+              "applicability": "applicable"
+            },
+            "hover": {
+              "applicability": "applicable"
+            },
+            "loading": {
+              "applicability": "not-applicable",
+              "reason": "같은 페이지 안에서 위치만 이동한다"
+            },
+            "success": {
+              "applicability": "not-applicable",
+              "reason": "입력이 없다"
+            }
+          }
+        },
+        "semantics": "화면 위에 고정된 메뉴. 모바일에서는 메뉴가 접힌다",
+        "states": [
+          "default",
+          "hover",
+          "focus-visible"
+        ],
+        "token_refs": [
+          "color.surface.base",
+          "color.border.subtle",
+          "color.text.strong"
+        ]
+      },
+      {
+        "anatomy": [
+          "어두운 바탕",
+          "용도 라벨"
+        ],
+        "id": "photo-slot",
+        "interaction": {
+          "kind": "non-interactive",
+          "reason": "표시 전용이다"
+        },
+        "semantics": "고객 사진을 받기 전까지 사진 위치와 용도를 보여주는 빈 자리",
+        "states": [
+          "default"
+        ],
+        "token_refs": [
+          "color.surface.dark",
+          "color.text.on-dark-muted",
+          "radius.none"
+        ]
+      }
+    ],
+    "rules": [
+      "키보드로 이동할 때 모든 링크와 버튼에 눈에 보이는 포커스 테두리를 둔다",
+      "버튼과 메뉴의 누를 수 있는 영역은 최소 44px 높이를 지킨다"
+    ]
+  },
+  "content_locales": {
+    "locales": [
+      {
+        "locale": "ko",
+        "rules": [
+          "존댓말 '-습니다'체를 쓴다",
+          "가공 범위 단위는 mm로 통일한다"
+        ],
+        "status": "supported"
+      }
+    ],
+    "terminology": {
+      "CMM": "3차원 측정기(CMM)",
+      "MCT": "머시닝센터(MCT)",
+      "견적 요청": "도면 보내고 견적 받기"
+    },
+    "voice": [
+      "짧고 사실 중심",
+      "현장 용어를 그대로 쓴다",
+      "숫자와 단위를 명확히 쓴다"
+    ]
+  },
+  "experience": {
+    "avoid": [
+      "둥근 카드와 아이콘 타일의 반복 나열",
+      "그라데이션 장식과 과장된 마케팅 문구",
+      "검증되지 않은 거래처 실명이나 인증 주장"
+    ],
+    "design_direction": [
+      "정밀하고 단단함",
+      "정보 우선",
+      "절제된 강조"
+    ],
+    "primary_tasks": [
+      "보유 설비와 가공 범위를 확인한다",
+      "품질 인증과 협력사 등록 이력을 확인한다",
+      "전화하거나 이메일로 도면을 보내 견적을 요청한다",
+      "공장 위치를 지도에서 찾는다"
+    ],
+    "principles": [
+      "행동 버튼은 한눈에 읽혀야 한다: 강조색은 견적 요청처럼 실제 행동에만 쓴다",
+      "숫자와 표가 주인공이다: 설비 표와 수치는 장식보다 먼저 읽힌다",
+      "사진이 없어도 성립한다: 사진 자리는 라벨이 붙은 빈칸으로 두고 가짜 사진을 넣지 않는다"
+    ],
+    "summary": "구매 담당자와 설계 엔지니어가 휴대폰에서도 설비·인증·연락처를 빠르게 확인하고 도면을 보낼 수 있는, 단단하고 정보 중심적인 B2B 회사 소개 페이지. 대한정밀은 연습용 가상 회사다."
+  },
+  "foundations": {
+    "contrast_pairs": [
+      {
+        "background": "color.surface.base",
+        "foreground": "color.text.strong",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.surface.base",
+        "foreground": "color.text.muted",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.surface.muted",
+        "foreground": "color.text.muted",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.action.primary",
+        "foreground": "color.text.on-dark",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.action.primary-hover",
+        "foreground": "color.text.on-dark",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.surface.dark",
+        "foreground": "color.text.on-dark",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.surface.dark",
+        "foreground": "color.text.on-dark-muted",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "color.surface.dark",
+        "foreground": "color.accent.on-dark",
+        "minimum_ratio": 4.5
+      }
+    ],
+    "reduced_motion": true,
+    "rules": [
+      "color.action.primary는 견적 요청·전화·이메일 같은 실제 행동에만 쓰고 배경 장식에 쓰지 않는다",
+      "한 화면에 강조색 버튼은 최대 2개까지 둔다",
+      "카드·표·사진 자리는 radius.none, 버튼만 radius.control을 쓴다",
+      "그림자 대신 color.border.subtle 테두리로 구역을 나눈다",
+      "그라데이션은 사진 자리 표시 외에는 쓰지 않는다"
+    ],
+    "tokens": {
+      "color.accent.on-dark": {
+        "$description": "어두운 배경 위 작은 강조 (대비 8.02:1)",
+        "$type": "color",
+        "$value": "#ff8a4c"
+      },
+      "color.action.primary": {
+        "$description": "견적 요청 등 주 행동 버튼 배경 (흰 글씨 대비 5.18:1)",
+        "$type": "color",
+        "$value": "#c2410c"
+      },
+      "color.action.primary-hover": {
+        "$description": "주 행동 버튼에 마우스를 올렸을 때 (흰 글씨 대비 7.31:1)",
+        "$type": "color",
+        "$value": "#9a3412"
+      },
+      "color.border.subtle": {
+        "$description": "표와 카드의 테두리",
+        "$type": "color",
+        "$value": "#d6dbe6"
+      },
+      "color.surface.base": {
+        "$description": "기본 배경",
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "color.surface.dark": {
+        "$description": "첫 화면과 품질 구역의 짙은 강철색 배경",
+        "$type": "color",
+        "$value": "#0b1220"
+      },
+      "color.surface.muted": {
+        "$description": "구역을 나누는 연회색 배경",
+        "$type": "color",
+        "$value": "#eef1f6"
+      },
+      "color.text.muted": {
+        "$description": "보조 설명 글자색",
+        "$type": "color",
+        "$value": "#3e4f73"
+      },
+      "color.text.on-dark": {
+        "$description": "어두운 배경 위 글자색",
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "color.text.on-dark-muted": {
+        "$description": "어두운 배경 위 보조 글자색",
+        "$type": "color",
+        "$value": "#b3bccd"
+      },
+      "color.text.strong": {
+        "$description": "본문과 제목의 기본 글자색",
+        "$type": "color",
+        "$value": "#111a2b"
+      },
+      "radius.control": {
+        "$description": "버튼과 입력 요소",
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "radius.none": {
+        "$description": "카드, 표, 사진 자리, 구역",
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "size.control-height": {
+        "$description": "주 행동 버튼 높이",
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "space.lg": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "space.md": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "space.section": {
+        "$description": "구역 사이 세로 간격 (데스크톱은 80px까지)",
+        "$type": "dimension",
+        "$value": "64px"
+      },
+      "space.sm": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "space.xl": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "space.xs": {
+        "$type": "dimension",
+        "$value": "8px"
+      }
+    }
+  },
+  "governance": {
+    "change_policy": [
+      "색·간격을 바꾸면 이 문서와 코드를 함께 바꾼다",
+      "실제 고객 작업 시 회사 정보와 사진 출처를 다시 확인한다"
+    ],
+    "priority": [
+      "사용자의 직접 지시",
+      "저장소의 실제 코드와 내용",
+      "이 디자인 시스템",
+      "검증된 참고 자료(IBM)"
+    ],
+    "unknown_policy": "absent-at-smallest-unresolved-boundary"
+  },
+  "identity": {
+    "kind": "project-system",
+    "name": "대한정밀",
+    "scope": "금속 정밀가공 공장(가상의 연습용 회사) 회사 소개 원페이지 웹사이트"
+  },
+  "layout_platforms": {
+    "minimum_width_px": 320,
+    "platforms": [
+      {
+        "id": "web",
+        "rules": [
+          "휴대폰 화면을 먼저 확인한다",
+          "전화번호는 누르면 바로 전화가 걸리는 링크로 만든다"
+        ]
+      }
+    ],
+    "reflow_zoom_percent": 200,
+    "rules": [
+      "본문 최대 폭은 1152px, 좌우 여백은 모바일 16px·태블릿 이상 24px",
+      "구역 순서: 첫 화면 → 회사소개 → 사업분야 → 보유설비 → 품질·인증 → 진행순서 → 거래분야 → 연혁 → 문의·위치",
+      "좁은 화면에서는 여러 칸이 한 칸으로 쌓이고, 설비 표만 옆으로 밀어서 본다",
+      "페이지 전체가 옆으로 밀리는 가로 스크롤은 없어야 한다"
+    ]
+  },
+  "projection": {
+    "locale": "en",
+    "path": "DESIGN.md",
+    "sha256": "1c700381661d54d132292081720b2c62a74ed465eea6b135970273b61a462650"
+  },
+  "schema_version": "2.0.0",
+  "typography_assets": {
+    "assets": [
+      {
+        "id": "pretendard",
+        "kind": "font",
+        "license_status": "verified",
+        "notes": "SIL Open Font License 1.1, 라이선스 문구가 글꼴 CSS 파일에 포함됨",
+        "source": "npm 패키지 pretendard (orioncactus/pretendard)",
+        "source_status": "licensed-sourced"
+      }
+    ],
+    "roles": [
+      {
+        "family": "Pretendard Variable",
+        "id": "display",
+        "line_height": 1.15,
+        "size": "clamp(36px, 6vw, 54px)",
+        "tracking": "-0.02em",
+        "usage": "첫 화면 슬로건",
+        "weight": 800
+      },
+      {
+        "family": "Pretendard Variable",
+        "id": "heading",
+        "line_height": 1.25,
+        "size": "clamp(28px, 4vw, 36px)",
+        "tracking": "-0.01em",
+        "usage": "구역 제목",
+        "weight": 800
+      },
+      {
+        "family": "Pretendard Variable",
+        "id": "body",
+        "line_height": 1.6,
+        "size": "16px",
+        "usage": "본문",
+        "weight": 400
+      },
+      {
+        "family": "Pretendard Variable",
+        "id": "action",
+        "line_height": 1.2,
+        "size": "15px",
+        "usage": "버튼 글자",
+        "weight": 700
+      },
+      {
+        "family": "Pretendard Variable",
+        "id": "label",
+        "line_height": 1.3,
+        "size": "12px",
+        "tracking": "0.16em",
+        "usage": "구역 위 작은 영문 표시와 표 머리글",
+        "weight": 700
+      },
+      {
+        "family": "ui-monospace, SFMono-Regular, Menlo, monospace",
+        "id": "data",
+        "line_height": 1.4,
+        "size": "13px",
+        "usage": "설비 표의 가공 범위 등 숫자",
+        "weight": 400
+      }
+    ],
+    "rules": [
+      "글자 크기는 화면당 4단계 이내로 쓴다",
+      "숫자가 나란히 놓이는 곳은 글자 폭이 같은 숫자(tabular-nums)를 쓴다",
+      "검증되지 않은 사진·로고를 진짜처럼 넣지 않는다",
+      "공장 전경·설비·측정실 사진은 고객이 제공한 것만 쓰고, 받기 전까지는 용도 라벨이 붙은 빈 자리로 둔다"
+    ]
+  }
+}
