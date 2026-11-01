@@ -5,6 +5,9 @@
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2026-10-01",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	// 기본 인터넷 주소(daehan-precision-site.<계정>.workers.dev)를 켠다.
+	// 이 줄이 없으면 배포는 돼도 주소가 꺼져 있어 아무도 접속할 수 없다.
+	"workers_dev": true,
 	"assets": {
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
