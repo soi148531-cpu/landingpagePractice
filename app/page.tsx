@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CountUp } from "./count-up";
 import {
   company,
   stats,
@@ -129,18 +130,26 @@ function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:py-28">
         <div>
-          <p className="mb-5 inline-flex items-center gap-2 rounded-none border border-steel-700 bg-steel-900/60 px-3 py-1 text-xs font-semibold tracking-wide text-steel-300">
+          <p className="reveal-fade mb-5 inline-flex items-center gap-2 rounded-none border border-steel-700 bg-steel-900/60 px-3 py-1 text-xs font-semibold tracking-wide text-steel-300">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-400" />
             {company.addressShort} · 금속 정밀가공 전문
           </p>
-          <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl md:text-[3.4rem]">
-            {company.slogan}
+          {/* 제목: 줄마다 보이지 않는 선 아래에서 위로 올라옴 (텍스트 리빌) */}
+          <h1
+            aria-label={company.slogan}
+            className="text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl md:text-[3.4rem]"
+          >
+            {company.sloganLines.map((line, i) => (
+              <span key={line} aria-hidden className="reveal-line">
+                <span style={{ animationDelay: `${150 + i * 140}ms` }}>{line}</span>
+              </span>
+            ))}
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-steel-300 sm:text-lg">
+          <p className="reveal-fade mt-6 max-w-xl text-base leading-relaxed text-steel-300 sm:text-lg" style={{ animationDelay: "500ms" }}>
             CNC 선반·머시닝센터 24대, 3차원 측정 전수 검사. 자동차·반도체 장비·산업기계
             부품을 ±0.005mm 공차로 안정 공급합니다.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="reveal-fade mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "620ms" }}>
             <a
               href="#contact"
               className="inline-flex h-12 items-center justify-center rounded-[4px] bg-action px-6 text-base font-bold text-white hover:bg-action-hover"
@@ -178,7 +187,7 @@ function Hero() {
           {stats.map((s) => (
             <div key={s.label} className="py-6 md:px-6 md:first:pl-0">
               <dd className="text-3xl font-extrabold tabular-nums tracking-tight text-white">
-                {s.value}
+                <CountUp value={s.value} />
                 <span className="ml-0.5 text-base font-bold text-accent-400">{s.unit}</span>
               </dd>
               <dt className="mt-1 text-sm text-steel-400">{s.label}</dt>

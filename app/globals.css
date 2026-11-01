@@ -40,6 +40,39 @@ html {
   }
 }
 
+/* ------------------------------------------------------------------
+   첫 화면 등장 효과
+   - reveal-line: 제목 한 줄이 보이지 않는 선 아래에서 위로 올라옴 (텍스트 리빌)
+   - reveal-fade: 설명·버튼이 살짝 아래에서 떠오르며 나타남 (페이드업)
+   애니메이션이 끝나면 모두 제자리에 보이는 상태로 멈춘다.
+   ------------------------------------------------------------------ */
+.reveal-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em; /* 한글 받침이 잘리지 않게 */
+}
+.reveal-line > span {
+  display: block;
+  animation: reveal-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.reveal-fade {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes reveal-up {
+  from { transform: translateY(105%); }
+  to { transform: translateY(0); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-line > span,
+  .reveal-fade {
+    animation: none;
+  }
+}
+
 /* 키보드(Tab)로 이동할 때 지금 위치를 테두리로 보여준다 */
 a:focus-visible,
 summary:focus-visible {
