@@ -21,15 +21,33 @@
   --color-steel-100: #eef1f6;
   --color-steel-50: #f7f8fb;
 
-  --color-accent-600: #d9531e;
-  --color-accent-500: #f06a2b;
+  /* 버튼 색 (DESIGN.md color.action.*) — 흰 글씨가 또렷하게 읽히는 진한 오렌지 */
+  --color-action: #c2410c;
+  --color-action-hover: #9a3412;
+
+  /* 어두운 배경 위 작은 강조 (DESIGN.md color.accent.on-dark) */
   --color-accent-400: #ff8a4c;
-  --color-accent-100: #ffe9dc;
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 4.5rem; /* 메뉴를 눌러 이동할 때 고정 메뉴에 가려지지 않게 */
+}
+
+/* 움직임 줄이기 설정을 켠 사람에게는 부드러운 스크롤을 끈다 */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 키보드(Tab)로 이동할 때 지금 위치를 테두리로 보여준다 */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-action);
+  outline-offset: 2px;
+}
+.bg-steel-950 a:focus-visible {
+  outline-color: var(--color-accent-400);
 }
 
 body {

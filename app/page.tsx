@@ -65,7 +65,7 @@ function Header() {
 
         <nav className="hidden items-center gap-7 text-sm font-semibold text-steel-700 md:flex">
           {nav.map((n) => (
-            <a key={n.href} href={n.href} className="hover:text-accent-600">
+            <a key={n.href} href={n.href} className="hover:text-action">
               {n.label}
             </a>
           ))}
@@ -74,7 +74,7 @@ function Header() {
         <div className="flex items-center gap-2">
           <a
             href={telHref}
-            className="inline-flex h-10 items-center gap-2 rounded-lg bg-steel-900 px-4 text-sm font-bold text-white hover:bg-steel-800"
+            className="inline-flex h-11 items-center gap-2 rounded-[4px] bg-steel-900 px-4 text-sm font-bold text-white hover:bg-steel-800"
           >
             <PhoneIcon className="h-4 w-4" />
             <span className="hidden sm:inline">{company.phone}</span>
@@ -83,16 +83,16 @@ function Header() {
 
           {/* 모바일 메뉴: 자바스크립트 없이 열고 닫히는 details 요소 */}
           <details className="relative md:hidden">
-            <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-steel-200 bg-white text-steel-800 [&::-webkit-details-marker]:hidden">
+            <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-[4px] border border-steel-200 bg-white text-steel-800 [&::-webkit-details-marker]:hidden">
               <MenuIcon className="h-5 w-5" />
               <span className="sr-only">메뉴 열기</span>
             </summary>
-            <div className="absolute right-0 mt-2 w-48 overflow-hidden rounded-xl border border-steel-200 bg-white p-1.5 shadow-xl">
+            <div className="absolute right-0 mt-2 w-48 overflow-hidden rounded-none border border-steel-200 bg-white p-1.5">
               {nav.map((n) => (
                 <a
                   key={n.href}
                   href={n.href}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-steel-800 hover:bg-steel-100"
+                  className="block rounded-none px-3 py-2.5 text-sm font-semibold text-steel-800 hover:bg-steel-100"
                 >
                   {n.label}
                 </a>
@@ -121,12 +121,12 @@ function Hero() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-10 top-24 h-[360px] w-[360px] rounded-full border-[18px] border-accent-500/20"
+        className="pointer-events-none absolute -right-10 top-24 h-[360px] w-[360px] rounded-full border-[18px] border-accent-400/20"
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:py-28">
         <div>
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-steel-700 bg-steel-900/60 px-3 py-1 text-xs font-semibold tracking-wide text-steel-300">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-none border border-steel-700 bg-steel-900/60 px-3 py-1 text-xs font-semibold tracking-wide text-steel-300">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-400" />
             {company.addressShort} · 금속 정밀가공 전문
           </p>
@@ -140,13 +140,13 @@ function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="inline-flex h-12 items-center justify-center rounded-lg bg-accent-500 px-6 text-base font-bold text-white shadow-lg shadow-accent-500/25 hover:bg-accent-600"
+              className="inline-flex h-12 items-center justify-center rounded-[4px] bg-action px-6 text-base font-bold text-white hover:bg-action-hover"
             >
               도면 보내고 견적 받기
             </a>
             <a
               href="#equipment"
-              className="inline-flex h-12 items-center justify-center rounded-lg border border-steel-600 px-6 text-base font-semibold text-white hover:bg-steel-800"
+              className="inline-flex h-12 items-center justify-center rounded-[4px] border border-steel-600 px-6 text-base font-semibold text-white hover:bg-steel-800"
             >
               보유 설비 보기
             </a>
@@ -154,8 +154,8 @@ function Hero() {
         </div>
 
         {/* 사진 자리: 실제 고객의 공장 전경·설비 사진이 들어갈 곳 */}
-        <div className="photo-slot flex aspect-[4/3] items-end rounded-2xl border border-steel-700/70 p-5 md:aspect-auto">
-          <div className="relative z-10 w-full rounded-xl border border-white/10 bg-steel-950/70 p-4 backdrop-blur">
+        <div className="photo-slot flex aspect-[4/3] items-end rounded-none border border-steel-700/70 p-5 md:aspect-auto">
+          <div className="relative z-10 w-full rounded-none border border-white/10 bg-steel-950/70 p-4 backdrop-blur">
             <p className="text-xs font-semibold tracking-wide text-steel-400">
               대표 가공 사례
             </p>
@@ -174,7 +174,7 @@ function Hero() {
         <dl className="mx-auto grid max-w-6xl grid-cols-2 divide-steel-800 px-4 sm:px-6 md:grid-cols-4 md:divide-x">
           {stats.map((s) => (
             <div key={s.label} className="py-6 md:px-6 md:first:pl-0">
-              <dd className="text-3xl font-extrabold tracking-tight text-white">
+              <dd className="text-3xl font-extrabold tabular-nums tracking-tight text-white">
                 {s.value}
                 <span className="ml-0.5 text-base font-bold text-accent-400">{s.unit}</span>
               </dd>
@@ -201,7 +201,7 @@ function About() {
     <Section id="about" eyebrow="ABOUT" title="회사 소개">
       <div className="grid gap-10 md:grid-cols-[1fr_320px]">
         <p className="text-lg leading-relaxed text-steel-700">{company.intro}</p>
-        <dl className="grid grid-cols-2 gap-x-6 gap-y-5 rounded-2xl border border-steel-200 bg-white p-6">
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-5 rounded-none border border-steel-200 bg-white p-6">
           {facts.map(([k, v]) => (
             <div key={k}>
               <dt className="text-xs font-semibold tracking-wide text-steel-500">{k}</dt>
@@ -224,9 +224,9 @@ function Services() {
         {services.map((s) => (
           <article
             key={s.title}
-            className="group rounded-2xl border border-steel-200 bg-white p-6 transition hover:-translate-y-0.5 hover:border-steel-300 hover:shadow-lg"
+            className="group rounded-none border border-steel-200 bg-white p-6 transition-colors hover:border-steel-400"
           >
-            <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-steel-900 text-accent-400 group-hover:bg-accent-500 group-hover:text-white">
+            <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-none bg-steel-900 text-accent-400 group-hover:bg-action group-hover:text-white">
               <ServiceIcon name={s.icon} className="h-6 w-6" />
             </div>
             <h3 className="text-lg font-bold text-steel-900">{s.title}</h3>
@@ -249,9 +249,9 @@ function Equipment() {
       title="보유 설비"
       desc="주요 설비 현황입니다. 가공 범위 단위는 mm입니다."
     >
-      <div className="overflow-hidden rounded-2xl border border-steel-200 bg-white">
+      <div className="overflow-hidden rounded-none border border-steel-200 bg-white">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] text-left text-sm">
+          <table className="w-full min-w-[640px] text-left text-sm tabular-nums">
             <thead className="bg-steel-900 text-xs font-semibold tracking-wide text-steel-200">
               <tr>
                 <th className="px-5 py-3.5">설비명</th>
@@ -279,9 +279,9 @@ function Equipment() {
         {["CNC 선반 라인", "머시닝센터 라인", "측정실 (CMM)"].map((label) => (
           <div
             key={label}
-            className="photo-slot flex aspect-[4/3] items-end rounded-xl p-4"
+            className="photo-slot flex aspect-[4/3] items-end rounded-none p-4"
           >
-            <span className="relative z-10 rounded-md bg-steel-950/70 px-2.5 py-1 text-xs font-semibold text-steel-200">
+            <span className="relative z-10 rounded-none bg-steel-950/70 px-2.5 py-1 text-xs font-semibold text-steel-200">
               {label}
             </span>
           </div>
@@ -301,7 +301,7 @@ function Quality() {
         {certifications.map((c) => (
           <div
             key={c.title}
-            className="rounded-2xl border border-steel-700 bg-steel-900/70 p-6"
+            className="rounded-none border border-steel-700 bg-steel-900/70 p-6"
           >
             <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-accent-400/40 text-accent-400">
               <CheckIcon className="h-5 w-5" />
@@ -328,9 +328,9 @@ function Process() {
         {process.map((p, i) => (
           <li
             key={p.step}
-            className="relative rounded-2xl border border-steel-200 bg-white p-6"
+            className="relative rounded-none border border-steel-200 bg-white p-6"
           >
-            <span className="text-xs font-extrabold tracking-[0.2em] text-accent-600">
+            <span className="text-xs font-extrabold tracking-[0.2em] text-action">
               STEP {p.step}
             </span>
             <h3 className="mt-2 text-lg font-bold text-steel-900">{p.title}</h3>
@@ -360,7 +360,7 @@ function Clients() {
         {clients.map((c) => (
           <li
             key={c}
-            className="rounded-full border border-steel-200 bg-white px-5 py-2.5 text-sm font-semibold text-steel-800"
+            className="rounded-none border border-steel-200 bg-white px-5 py-2.5 text-sm font-semibold text-steel-800"
           >
             {c}
           </li>
@@ -384,9 +384,9 @@ function History() {
           <li key={h.year} className="relative pb-8 last:pb-0">
             <span
               aria-hidden
-              className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-4 border-white bg-accent-500 ring-1 ring-steel-200"
+              className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-4 border-white bg-action ring-1 ring-steel-200"
             />
-            <p className="text-sm font-extrabold tracking-wide text-accent-600">{h.year}</p>
+            <p className="text-sm font-extrabold tracking-wide text-action">{h.year}</p>
             <p className="mt-1 text-base font-medium text-steel-800">{h.text}</p>
           </li>
         ))}
@@ -415,7 +415,7 @@ function Contact() {
       tone="muted"
     >
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-2xl border border-steel-200 bg-white p-6 sm:p-8">
+        <div className="rounded-none border border-steel-200 bg-white p-6 sm:p-8">
           <dl className="space-y-4">
             {rows.map(([k, v]) => (
               <div key={k} className="grid grid-cols-[72px_1fr] gap-3 text-sm">
@@ -427,14 +427,14 @@ function Contact() {
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             <a
               href={`mailto:${company.email}?subject=${encodeURIComponent("[견적문의] 회사명 / 품목 / 수량")}`}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-accent-500 text-sm font-bold text-white hover:bg-accent-600"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-[4px] bg-action text-sm font-bold text-white hover:bg-action-hover"
             >
               <MailIcon className="h-4 w-4" />
               이메일로 도면 보내기
             </a>
             <a
               href={telHref}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-steel-300 bg-white text-sm font-bold text-steel-900 hover:bg-steel-100"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-[4px] border border-steel-300 bg-white text-sm font-bold text-steel-900 hover:bg-steel-100"
             >
               <PhoneIcon className="h-4 w-4" />
               {company.phone}
@@ -443,7 +443,7 @@ function Contact() {
         </div>
 
         {/* 지도 자리: 네이버 지도 인증키를 받으면 이 자리에 실제 지도를 넣습니다 */}
-        <div className="photo-slot flex min-h-[280px] flex-col items-center justify-center rounded-2xl p-6 text-center">
+        <div className="photo-slot flex min-h-[280px] flex-col items-center justify-center rounded-none p-6 text-center">
           <div className="relative z-10">
             <PinIcon className="mx-auto h-10 w-10 text-accent-400" />
             <p className="mt-3 text-base font-bold text-white">{company.addressShort}</p>
@@ -452,7 +452,7 @@ function Contact() {
               href={naverMapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex h-11 items-center justify-center rounded-lg bg-white px-5 text-sm font-bold text-steel-900 hover:bg-steel-100"
+              className="mt-5 inline-flex h-11 items-center justify-center rounded-[4px] bg-white px-5 text-sm font-bold text-steel-900 hover:bg-steel-100"
             >
               네이버 지도에서 보기
             </a>
@@ -483,7 +483,7 @@ function Footer() {
         </div>
         <div className="space-y-1 md:text-right">
           <p>© {company.copyrightYear} {company.name}. All rights reserved.</p>
-          <p className="inline-block rounded bg-steel-100 px-2 py-0.5 font-medium text-steel-600">
+          <p className="inline-block rounded-none bg-steel-100 px-2 py-0.5 font-medium text-steel-600">
             연습용 샘플 사이트 · 가상의 회사입니다
           </p>
         </div>
@@ -516,7 +516,7 @@ function Section({
       : tone === "muted"
         ? "bg-steel-100"
         : "bg-white";
-  const eyebrowColor = tone === "dark" ? "text-accent-400" : "text-accent-600";
+  const eyebrowColor = tone === "dark" ? "text-accent-400" : "text-action";
   const titleColor = tone === "dark" ? "text-white" : "text-steel-900";
   const descColor = tone === "dark" ? "text-steel-300" : "text-steel-600";
   return (
