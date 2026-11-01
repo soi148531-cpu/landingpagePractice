@@ -277,17 +277,28 @@ function Equipment() {
         </div>
       </div>
 
-      {/* 설비 사진 자리 3칸 */}
+      {/* 설비 사진 3칸 (연습용 AI 생성 이미지 — 실제 고객은 진짜 설비 사진으로 교체) */}
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        {["CNC 선반 라인", "머시닝센터 라인", "측정실 (CMM)"].map((label) => (
-          <div
-            key={label}
-            className="photo-slot flex aspect-[4/3] items-end rounded-none p-4"
+        {[
+          { label: "CNC 선반 라인", src: "/images/line-lathe.webp" },
+          { label: "머시닝센터 라인", src: "/images/line-mct.webp" },
+          { label: "측정실 (CMM)", src: "/images/line-cmm.webp" },
+        ].map((p) => (
+          <figure
+            key={p.label}
+            className="relative flex aspect-[4/3] items-end overflow-hidden bg-steel-950 p-4"
           >
-            <span className="relative z-10 rounded-none bg-steel-950/70 px-2.5 py-1 text-xs font-semibold text-steel-200">
-              {label}
-            </span>
-          </div>
+            <Image
+              src={p.src}
+              alt={p.label}
+              fill
+              sizes="(min-width: 640px) 33vw, 100vw"
+              className="object-cover"
+            />
+            <figcaption className="relative z-10 bg-steel-950/80 px-2.5 py-1 text-xs font-semibold text-white">
+              {p.label}
+            </figcaption>
+          </figure>
         ))}
       </div>
     </Section>
