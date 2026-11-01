@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CountUp } from "./count-up";
+import { InPageLinks } from "./in-page-links";
 import {
   company,
   stats,
@@ -29,6 +30,7 @@ const telHref = `tel:${company.phone.replaceAll("-", "")}`;
 export default function Home() {
   return (
     <>
+      <InPageLinks />
       <Header />
       <main className="flex-1">
         <Hero />
