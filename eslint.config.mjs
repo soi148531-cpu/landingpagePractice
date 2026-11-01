@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // 외부 도구가 설치한 파일 (oh-my-design, 클라우드플레어 빌드 결과)
+    ".claude/**",
+    ".open-next/**",
+    ".wrangler/**",
   ]),
 ]);
 
