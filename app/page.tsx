@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   company,
   stats,
@@ -110,18 +111,20 @@ function Header() {
    ==================================================================== */
 function Hero() {
   return (
-    <section
-      id="top"
-      className="bg-brushed relative overflow-hidden bg-steel-950 text-white"
-    >
-      {/* 배경 장식: 큰 원형 가공물 느낌 */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full border-[28px] border-steel-800/60"
+    <section id="top" className="relative overflow-hidden bg-steel-950 text-white">
+      {/* 배경 사진: CNC 선반 작업장 (연습용 AI 생성 이미지 — 실제 고객은 진짜 공장 사진으로 교체) */}
+      <Image
+        src="/images/hero-machines.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="scale-105 object-cover object-[70%_center] blur-[3px]"
       />
+      {/* 어두운 막: 왼쪽(글씨 쪽)은 진하게, 오른쪽(기계 쪽)은 옅게 — 흰 글씨가 또렷하게 읽히도록 */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-10 top-24 h-[360px] w-[360px] rounded-full border-[18px] border-accent-400/20"
+        className="absolute inset-0 bg-gradient-to-r from-steel-950/95 via-steel-950/80 to-steel-950/45"
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:py-28">
@@ -153,9 +156,9 @@ function Hero() {
           </div>
         </div>
 
-        {/* 사진 자리: 실제 고객의 공장 전경·설비 사진이 들어갈 곳 */}
-        <div className="photo-slot flex aspect-[4/3] items-end rounded-none border border-steel-700/70 p-5 md:aspect-auto">
-          <div className="relative z-10 w-full rounded-none border border-white/10 bg-steel-950/70 p-4 backdrop-blur">
+        {/* 대표 가공 사례: 배경 사진 위에 반투명 유리판처럼 띄움 */}
+        <div className="flex items-end">
+          <div className="w-full border border-white/15 bg-steel-950/55 p-5 backdrop-blur-md">
             <p className="text-xs font-semibold tracking-wide text-steel-400">
               대표 가공 사례
             </p>
@@ -170,7 +173,7 @@ function Hero() {
       </div>
 
       {/* 숫자 4개 */}
-      <div className="relative border-t border-steel-800 bg-steel-900/60">
+      <div className="relative border-t border-white/10 bg-steel-950/70 backdrop-blur-md">
         <dl className="mx-auto grid max-w-6xl grid-cols-2 divide-steel-800 px-4 sm:px-6 md:grid-cols-4 md:divide-x">
           {stats.map((s) => (
             <div key={s.label} className="py-6 md:px-6 md:first:pl-0">
@@ -443,7 +446,16 @@ function Contact() {
         </div>
 
         {/* 지도 자리: 네이버 지도 인증키를 받으면 이 자리에 실제 지도를 넣습니다 */}
-        <div className="photo-slot flex min-h-[280px] flex-col items-center justify-center rounded-none p-6 text-center">
+        <div className="relative flex min-h-[280px] flex-col items-center justify-center overflow-hidden bg-steel-950 p-6 text-center">
+          {/* 공장 외관 사진 (연습용 AI 생성 이미지) */}
+          <Image
+            src="/images/factory-exterior.webp"
+            alt="대한정밀 공장 외관"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+          <div aria-hidden className="absolute inset-0 bg-steel-950/75" />
           <div className="relative z-10">
             <PinIcon className="mx-auto h-10 w-10 text-accent-400" />
             <p className="mt-3 text-base font-bold text-white">{company.addressShort}</p>
