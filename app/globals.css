@@ -25,6 +25,9 @@
   --color-action: #c2410c;
   --color-action-hover: #9a3412;
 
+  /* 로고 판 색 (DESIGN.md color.brand.logo) — 로고 글자는 남색(steel-900)으로 둔다 */
+  --color-brand-logo: #ea7036;
+
   /* 어두운 배경 위 작은 강조 (DESIGN.md color.accent.on-dark) */
   --color-accent-400: #ff8a4c;
 }

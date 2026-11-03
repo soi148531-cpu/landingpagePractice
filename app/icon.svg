@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 대한정밀 로고: 스텐실 DH (연습용 가상 회사) -->
+  <defs>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <rect x="0" y="30.6" width="64" height="2.8" fill="#000"/>
+      <rect x="17.4" y="0" width="2.6" height="64" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" fill="#ea7036"/>
+  <g fill="#111a2b" mask="url(#cut)">
+    <path fill-rule="evenodd" d="M12 19 H23 C29.5 19 32 24.5 32 32 C32 39.5 29.5 45 23 45 H12 Z M18 25 V39 H22.5 C25.2 39 26 36 26 32 C26 28 25.2 25 22.5 25 Z"/>
+    <path d="M35 19 H41 V28.5 H46 V19 H52 V45 H46 V35.5 H41 V45 H35 Z"/>
+  </g>
+</svg>

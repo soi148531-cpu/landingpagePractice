@@ -35,7 +35,7 @@
 
 - 숫자와 표가 주인공이다: 설비 표와 수치는 장식보다 먼저 읽힌다
 
-- 사진이 없어도 성립한다: 사진 자리는 라벨이 붙은 빈칸으로 두고 가짜 사진을 넣지 않는다
+- 사진은 실제 현장만 보여준다: 연습작(가상 회사)은 AI 생성 사진을 쓰고, 실제 고객 작업은 고객이 제공한 사진으로 바꾼다
 
 ### Avoid
 
@@ -55,6 +55,7 @@
 - **color.action.primary**: `#c2410c` — 견적 요청 등 주 행동 버튼 배경 (흰 글씨 대비 5.18:1)
 - **color.action.primary-hover**: `#9a3412` — 주 행동 버튼에 마우스를 올렸을 때 (흰 글씨 대비 7.31:1)
 - **color.border.subtle**: `#d6dbe6` — 표와 카드의 테두리
+- **color.brand.logo**: `#ea7036` — 로고 판 색. 글자는 color.text.strong (대비 5.69:1)
 - **color.surface.base**: `#ffffff` — 기본 배경
 - **color.surface.dark**: `#0b1220` — 첫 화면과 품질 구역의 짙은 강철색 배경
 - **color.surface.muted**: `#eef1f6` — 구역을 나누는 연회색 배경
@@ -82,6 +83,7 @@
 - color.text.on-dark on color.surface.dark: minimum 4.5:1
 - color.text.on-dark-muted on color.surface.dark: minimum 4.5:1
 - color.accent.on-dark on color.surface.dark: minimum 4.5:1
+- color.text.strong on color.brand.logo: minimum 4.5:1
 
 ### Reduced motion
 
@@ -119,6 +121,7 @@ Required.
 | Asset | Kind | Source status | License status | Source | Notes |
 |---|---|---|---|---|---|
 | pretendard | font | licensed-sourced | verified | npm 패키지 pretendard (orioncactus/pretendard) | SIL Open Font License 1.1, 라이선스 문구가 글꼴 CSS 파일에 포함됨 |
+| logo-dh | logo | generated-original | not-required | app/icon.svg | 연습용 가상 회사 로고. 브라우저 탭 아이콘과 상단 메뉴에 같은 도형을 쓴다 |
 
 ### Rules
 
@@ -128,7 +131,9 @@ Required.
 
 - 검증되지 않은 사진·로고를 진짜처럼 넣지 않는다
 
-- 공장 전경·설비·측정실 사진은 고객이 제공한 것만 쓰고, 받기 전까지는 용도 라벨이 붙은 빈 자리로 둔다
+- 공장 전경·설비·측정실 사진은 실제 고객 작업에서는 고객이 제공한 것만 쓴다. 연습작에는 AI 생성 사진을 쓰고, 생성 도구 표시는 잘라낸다
+
+- 로고는 스텐실 DH를 쓴다: 판은 color.brand.logo, 글자는 color.text.strong. 글자를 흰색으로 바꾸지 않는다
 
 <!-- design-md:section components-states -->
 ## 4. Components & States

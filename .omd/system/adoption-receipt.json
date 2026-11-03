@@ -1,36 +1,36 @@
 {
   "authority": "system-graph",
   "inputs": {
-    "coverage_sha256": "428dfd8f7f9e6b6b6c0b382d86357e3625b673c96110538b7d8419dd73fb6359",
-    "graph_sha256": "0abd68a0b0f759c6c5c4d96331001820b322f200b8ac613a0651f101876c901a",
-    "provenance_sha256": "10720e9af450ea42b243883a5330f5cd8c5c3a16156fb435b92e2f5247395c8b"
+    "coverage_sha256": "319e65e07df33bc4dce080b8bf63f83506828a2880a8f30f69982b644c5cc732",
+    "graph_sha256": "0dd002b213c2eb17e810a98d987d89957ea13368cc4b1176934ffb67a0527186",
+    "provenance_sha256": "757cbb8acb2cad066f663a8deb8c89b9b38e52c958c2829f39aa9aa0097c65a9"
   },
   "kind": "design-md-core-adoption-receipt",
   "outputs": {
     "coverage": {
       "path": ".omd/system/coverage.json",
-      "sha256": "b45a9e4ca104446ad51e1c73827b21d6635ad61b4d7cbf25ba7e0e811ace195f"
+      "sha256": "d05f2568ec31b04e82a7177f787deba50820cf98efdd00bfbd53dff5db7f37d4"
     },
     "design_md": {
       "path": "DESIGN.md",
-      "sha256": "1c700381661d54d132292081720b2c62a74ed465eea6b135970273b61a462650"
+      "sha256": "8574fc0fb76e7d119eba903e1eef06dcbf716d0b02c1877313fc039b28a77b3a"
     },
     "graph": {
       "path": ".omd/system/graph.json",
-      "sha256": "59edf801db6b53c238e9aeea091c3931fdf3906e85f6777820c180b551694c28"
+      "sha256": "12bc5c612f1a5d98ac2d6ea0d00ea8b056631e5fd4f500f6224cdc492997b21d"
     },
     "manifest": {
       "path": ".omd/system/manifest.json",
-      "sha256": "a8477bff485407bfc0e0c06f06c6c57a9892b1d47b9dc95bdd7bcdcc44817692"
+      "sha256": "1eaf165f83a8819cd157bb306873bd6ebac0c6f311e64106e26df6ca6b2afed0"
     },
     "provenance": {
       "path": ".omd/system/provenance.json",
-      "sha256": "dc3478d4b413d4abb6801b96564f921f98a641dc03601cc77f367eaab83119d5"
+      "sha256": "dce9e68dc69f721d688074c1fde6d40645de392ac35c5b1f766cf0d36b9e739b"
     }
   },
   "review": {
     "authority_transition_approved": true,
-    "receipt_sha256": "a0715acd7838c360da581ed5f65ff37efcbb1c96c5d8c3a884820e922564baf1",
+    "receipt_sha256": "63cb820f810a8949a52a8619a299bb9bd2ae714e2848a2901fb830c479a6cfab",
     "reviewer": {
       "identifier": "soi148531-cpu",
       "role": "project-owner"

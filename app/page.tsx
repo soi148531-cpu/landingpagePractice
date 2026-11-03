@@ -581,12 +581,25 @@ const stroke = {
   strokeLinejoin: "round" as const,
 };
 
+// 로고: 스텐실 DH (부품 상자에 페인트로 찍는 끊긴 글자). app/icon.svg와 같은 모양.
 function Logo({ className }: IconProps) {
   return (
-    <svg viewBox="0 0 32 32" className={className} aria-hidden>
-      <rect x="2" y="2" width="28" height="28" rx="7" className="fill-steel-900" />
-      <circle cx="16" cy="16" r="7.5" className="fill-none stroke-accent-400" strokeWidth="2.5" />
-      <circle cx="16" cy="16" r="2.5" className="fill-accent-400" />
+    <svg viewBox="0 0 64 64" className={className} aria-hidden>
+      <defs>
+        <mask id="logo-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+          <rect width="64" height="64" fill="#fff" />
+          <rect x="0" y="30.6" width="64" height="2.8" fill="#000" />
+          <rect x="17.4" y="0" width="2.6" height="64" fill="#000" />
+        </mask>
+      </defs>
+      <rect x="4" y="4" width="56" height="56" className="fill-brand-logo" />
+      <g className="fill-steel-900" mask="url(#logo-cut)">
+        <path
+          fillRule="evenodd"
+          d="M12 19 H23 C29.5 19 32 24.5 32 32 C32 39.5 29.5 45 23 45 H12 Z M18 25 V39 H22.5 C25.2 39 26 36 26 32 C26 28 25.2 25 22.5 25 Z"
+        />
+        <path d="M35 19 H41 V28.5 H46 V19 H52 V45 H46 V35.5 H41 V45 H35 Z" />
+      </g>
     </svg>
   );
 }

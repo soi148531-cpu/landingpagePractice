@@ -16,14 +16,6 @@
     },
     {
       "evidence": [
-        ".omd/decisions.md",
-        ".claude/data/references/ibm/DESIGN.md"
-      ],
-      "path": "/experience/principles",
-      "source_class": "agent-proposed-greenfield-decision"
-    },
-    {
-      "evidence": [
         ".omd/decisions.md"
       ],
       "path": "/foundations/tokens/color.action.primary",
@@ -116,13 +108,35 @@
     },
     {
       "evidence": [
+        ".omd/decisions.md",
+        ".claude/data/references/ibm/DESIGN.md"
+      ],
+      "path": "/experience/principles",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
         ".omd/decisions.md"
       ],
       "path": "/typography_assets/rules",
       "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        ".omd/decisions.md"
+      ],
+      "path": "/foundations/tokens/color.brand.logo",
+      "source_class": "prompt-fact"
+    },
+    {
+      "evidence": [
+        "app/icon.svg"
+      ],
+      "path": "/typography_assets/assets/1",
+      "source_class": "repository-fact"
     }
   ],
-  "design_md_sha256": "1c700381661d54d132292081720b2c62a74ed465eea6b135970273b61a462650",
-  "graph_sha256": "59edf801db6b53c238e9aeea091c3931fdf3906e85f6777820c180b551694c28",
+  "design_md_sha256": "8574fc0fb76e7d119eba903e1eef06dcbf716d0b02c1877313fc039b28a77b3a",
+  "graph_sha256": "12bc5c612f1a5d98ac2d6ea0d00ea8b056631e5fd4f500f6224cdc492997b21d",
   "schema_version": "2.0.0"
 }
